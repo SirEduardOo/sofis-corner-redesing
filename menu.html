@@ -12,12 +12,18 @@
   <!-- ============ NAVIGATION ============ -->
   <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__container">
-      <a href="index.html" class="nav__logo">Sofi's Corner</a>
+
+      <a href="index.html" class="nav__logo">
+        <img
+          src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
+          alt="Sofi's Corner Cafe"
+          class="nav__logo-img">
+      </a>
 
       <ul class="nav__links" role="list">
-        <li><a href="index.html"       class="nav__link">Home</a></li>
-        <li><a href="menu.html"        class="nav__link" aria-current="page">Menu</a></li>
-        <li><a href="index.html#hours" class="nav__link">Hours</a></li>
+        <li><a href="index.html"         class="nav__link">Home</a></li>
+        <li><a href="menu.html"          class="nav__link" aria-current="page">Menu</a></li>
+        <li><a href="index.html#hours"   class="nav__link">Hours</a></li>
         <li><a href="index.html#contact" class="nav__link">Contact</a></li>
       </ul>
 
@@ -44,8 +50,13 @@
 
     <!-- ============ MENU HERO ============ -->
     <header class="menu-hero" aria-labelledby="menu-page-title">
-      <div class="container">
-        <span class="eyebrow" style="color:rgba(217,119,6,.85)">Sofi's Corner Cafe</span>
+      <img
+        src="https://static.wixstatic.com/media/660fac_1a75d5efac10486bacba7bb75b56e403~mv2.jpg"
+        alt="Inside Sofi's Corner Cafe"
+        class="menu-hero__img">
+      <div class="menu-hero__overlay" aria-hidden="true"></div>
+      <div class="container menu-hero__content">
+        <span class="eyebrow" style="color:var(--accent)">Sofi's Corner Cafe</span>
         <h1 class="menu-hero__title" id="menu-page-title">Our Menu</h1>
         <p class="menu-hero__subtitle">Breakfast served all day &nbsp;·&nbsp; Lunch from 11am<br>Mon–Fri 7am–4pm &nbsp;·&nbsp; Sat–Sun 8am–4pm</p>
       </div>
@@ -65,72 +76,135 @@
         <ul class="menu-items" role="list" aria-label="Breakfast items">
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Bagel with Cream Cheese</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_cda93c3f0063495c91635de10c62551a~mv2.png"
+              alt="Fresh bagel with cream cheese"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Bagel with Cream Cheese</span>
+              </div>
+              <span class="menu-item__price">$4.25</span>
             </div>
-            <span class="menu-item__price">$4.25</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Breakfast Sandwich</span>
-              <span class="menu-item__desc">Ham, bacon, or sausage + egg on English muffin, bagel, or waffle</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_4a4cf20551a1405085620dfd8ba5ea8c~mv2.jpg"
+              alt="Breakfast sandwich with egg on English muffin"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Breakfast Sandwich</span>
+                <span class="menu-item__desc">Ham, bacon, or sausage + egg on English muffin, bagel, or waffle</span>
+              </div>
+              <span class="menu-item__price">$6.50</span>
             </div>
-            <span class="menu-item__price">$6.50</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Waffle</span>
-              <span class="menu-item__desc">With butter and syrup &nbsp;·&nbsp; Add fresh fruit +$2.00</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_a22d7703bec942489751542832e0fc75~mv2.png"
+              alt="Golden waffle with butter and syrup"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Waffle</span>
+                <span class="menu-item__desc">With butter and syrup · Add fresh fruit +$2.00</span>
+              </div>
+              <span class="menu-item__price">$4.25</span>
             </div>
-            <span class="menu-item__price">$4.25</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Fruit Cup</span>
-              <span class="menu-item__desc">Strawberries, cantaloupe, grapes</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_5cb542c96bf54dc99c5d8a663714ddb2~mv2.png"
+              alt="Fresh fruit cup with strawberries, cantaloupe, and grapes"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Fruit Cup</span>
+                <span class="menu-item__desc">Strawberries, cantaloupe, grapes</span>
+              </div>
+              <span class="menu-item__price">$3.75</span>
             </div>
-            <span class="menu-item__price">$3.75</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Scone</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_3a1e593dbbf247efb7b8211319ddae43~mv2.jpg"
+              alt="Freshly baked scone"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Scone</span>
+              </div>
+              <span class="menu-item__price">$2.49</span>
             </div>
-            <span class="menu-item__price">$2.49</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Stuffed Scone</span>
-              <span class="menu-item__desc">Strawberry jam or Nutella</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_d59efe917d1f424da0d8ad7e32be59d7~mv2.jpg"
+              alt="Stuffed scone with strawberry jam or Nutella filling"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Stuffed Scone</span>
+                <span class="menu-item__desc">Strawberry jam or Nutella</span>
+              </div>
+              <span class="menu-item__price">$3.25</span>
             </div>
-            <span class="menu-item__price">$3.25</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Cookie</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_b1cf6e6b7f0645f6a14385d801369426~mv2.jpg"
+              alt="Freshly baked cookies"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Cookie</span>
+              </div>
+              <span class="menu-item__price">$2.00</span>
             </div>
-            <span class="menu-item__price">$2.00</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Breakfast Burrito</span>
-              <span class="menu-item__desc">Ham, bacon, or sausage + cheese + egg in flour tortilla</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_b6b2d6caaacd45699b14599608b9270a~mv2.jpg"
+              alt="Breakfast burrito with egg, cheese, and choice of meat"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Breakfast Burrito</span>
+                <span class="menu-item__desc">Ham, bacon, or sausage + cheese + egg in flour tortilla</span>
+              </div>
+              <span class="menu-item__price">$6.50</span>
             </div>
-            <span class="menu-item__price">$6.50</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Grande Breakfast Burrito</span>
-              <span class="menu-item__desc">With a side</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_73476efa440f46798efe593f130aed0b~mv2.jpg"
+              alt="Grande breakfast burrito served with a side"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Grande Breakfast Burrito</span>
+                <span class="menu-item__desc">With a side</span>
+              </div>
+              <span class="menu-item__price">$10.49</span>
             </div>
-            <span class="menu-item__price">$10.49</span>
           </li>
 
         </ul>
@@ -147,111 +221,216 @@
         <ul class="menu-items" role="list" aria-label="Lunch items">
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">French Dip</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_dbef4acac99243199083a1841929c17d~mv2.jpg"
+              alt="Classic French dip sandwich"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">French Dip</span>
+              </div>
+              <span class="menu-item__price">$13.95</span>
             </div>
-            <span class="menu-item__price">$13.95</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">BLTTA</span>
-              <span class="menu-item__desc">Bacon, Turkey, Lettuce, Tomato, Avocado</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_7398ee6ae65640f8ad99c85952ccc23f~mv2.jpg"
+              alt="BLTTA sandwich with bacon, turkey, lettuce, tomato, and avocado"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">BLTTA</span>
+                <span class="menu-item__desc">Bacon, Turkey, Lettuce, Tomato, Avocado</span>
+              </div>
+              <span class="menu-item__price">$13.49</span>
             </div>
-            <span class="menu-item__price">$13.49</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Turkey Pesto Panini</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_2ed48242ffd248c3acfd577f1ae736c8~mv2.jpg"
+              alt="Turkey pesto panini pressed and golden"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Turkey Pesto Panini</span>
+              </div>
+              <span class="menu-item__price">$13.25</span>
             </div>
-            <span class="menu-item__price">$13.25</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Chicken Chipotle Panini</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_ff4797f3e6db46f6a9b967136f6e7bf0~mv2.jpg"
+              alt="Chicken chipotle panini with smoky chipotle sauce"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Chicken Chipotle Panini</span>
+              </div>
+              <span class="menu-item__price">$13.95</span>
             </div>
-            <span class="menu-item__price">$13.95</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Chicken Quesadilla</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_601896e3308a4a74aff21ed28751a039~mv2.jpg"
+              alt="Chicken quesadilla with melted cheese"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Chicken Quesadilla</span>
+              </div>
+              <span class="menu-item__price">$11.25</span>
             </div>
-            <span class="menu-item__price">$11.25</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Grilled Cheese</span>
-              <span class="menu-item__desc">Add meat +$2.50</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_f4da81f96bd04c44adc96f7995f4ba81~mv2.jpg"
+              alt="Classic grilled cheese sandwich"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Grilled Cheese</span>
+                <span class="menu-item__desc">Add meat +$2.50</span>
+              </div>
+              <span class="menu-item__price">$9.99</span>
             </div>
-            <span class="menu-item__price">$9.99</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Tuna Panini Melt</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_54dc5d0d709c423988c542892fba63f0~mv2.jpg"
+              alt="Tuna panini melt with melted cheese"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Tuna Panini Melt</span>
+              </div>
+              <span class="menu-item__price">$11.99</span>
             </div>
-            <span class="menu-item__price">$11.99</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Spicy French Dip</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_5e634016f09f4543b180eb06b8483758~mv2.jpg"
+              alt="Spicy French dip sandwich with au jus"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Spicy French Dip</span>
+              </div>
+              <span class="menu-item__price">$14.25</span>
             </div>
-            <span class="menu-item__price">$14.25</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">BBQ Chicken Wrap</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_f7142d09baa84af58da083928a2501bf~mv2.jpg"
+              alt="BBQ chicken wrap with tangy barbecue sauce"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">BBQ Chicken Wrap</span>
+              </div>
+              <span class="menu-item__price">$12.99</span>
             </div>
-            <span class="menu-item__price">$12.99</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Garden Salad</span>
-              <span class="menu-item__desc">Add meat +$2.50</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_a08b12c3f4a147898889026c2923d6a5~mv2.jpg"
+              alt="Fresh garden salad with mixed greens and vegetables"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Garden Salad</span>
+                <span class="menu-item__desc">Add meat +$2.50</span>
+              </div>
+              <span class="menu-item__price">$9.99</span>
             </div>
-            <span class="menu-item__price">$9.99</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Chef Salad</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_e5a4a96ea0d744848acb3804f84210221~mv2.jpg"
+              alt="Hearty chef salad loaded with fresh ingredients"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Chef Salad</span>
+              </div>
+              <span class="menu-item__price">$13.75</span>
             </div>
-            <span class="menu-item__price">$13.75</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Side Salad</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_a08b12c3f4a147898889026c2923d6a5~mv2.jpg"
+              alt="Side salad with fresh greens"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Side Salad</span>
+              </div>
+              <span class="menu-item__price">$5.99</span>
             </div>
-            <span class="menu-item__price">$5.99</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Cup of Soup</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_70eee3fc04e3406a9f96d4f90b140221~mv2.webp"
+              alt="Cup of warm homemade soup"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Cup of Soup</span>
+              </div>
+              <span class="menu-item__price">$4.49</span>
             </div>
-            <span class="menu-item__price">$4.49</span>
           </li>
 
           <li class="menu-item reveal reveal--delay-1">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Bowl of Soup</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_0881c520fa724573be2c902ca56b5d20~mv2.jpg"
+              alt="Bowl of warm homemade soup"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Bowl of Soup</span>
+              </div>
+              <span class="menu-item__price">$6.49</span>
             </div>
-            <span class="menu-item__price">$6.49</span>
           </li>
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Potato Chips</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_ff4797f3e6db46f6a9b967136f6e7bf0~mv2.jpg"
+              alt="Potato chips side"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Potato Chips</span>
+              </div>
+              <span class="menu-item__price">$2.00</span>
             </div>
-            <span class="menu-item__price">$2.00</span>
           </li>
 
         </ul>
@@ -267,11 +446,18 @@
         <ul class="menu-items" role="list" aria-label="Drink items">
 
           <li class="menu-item reveal">
-            <div class="menu-item__info">
-              <span class="menu-item__name">Bottled Beverages</span>
-              <span class="menu-item__desc">Soda, iced tea, lemonade, juice, water</span>
+            <img
+              src="https://static.wixstatic.com/media/660fac_b55a9b78dc0248e19a681d60c1933b81~mv2.jpg"
+              alt="Assorted bottled beverages including soda, iced tea, lemonade, juice, and water"
+              class="menu-item__img"
+              loading="lazy">
+            <div class="menu-item__body">
+              <div class="menu-item__info">
+                <span class="menu-item__name">Bottled Beverages</span>
+                <span class="menu-item__desc">Soda, iced tea, lemonade, juice, water</span>
+              </div>
+              <span class="menu-item__price">$2.50</span>
             </div>
-            <span class="menu-item__price">$2.50</span>
           </li>
 
         </ul>
@@ -287,7 +473,12 @@
       <div class="footer__grid">
 
         <div>
-          <a href="index.html" class="footer__logo">Sofi's Corner</a>
+          <a href="index.html" aria-label="Sofi's Corner Cafe — Home">
+            <img
+              src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
+              alt="Sofi's Corner Cafe logo"
+              class="footer__logo-img">
+          </a>
           <p class="footer__tagline">Good coffee, great food, and warm hospitality in the heart of Tacoma.</p>
           <div class="footer__social" aria-label="Social media">
             <a href="https://instagram.com/sofis_corner_cafe"
