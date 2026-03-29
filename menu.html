@@ -13,18 +13,21 @@
   <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__container">
 
-      <a href="index.html" class="nav__logo">
-        <img
-          src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
-          alt="Sofi's Corner Cafe"
-          class="nav__logo-img">
-      </a>
+      <div class="nav__brand">
+        <a href="index.html" class="nav__logo">
+          <img
+            src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
+            alt="Sofi's Corner Cafe"
+            class="nav__logo-img">
+        </a>
+      </div>
 
       <ul class="nav__links" role="list">
-        <li><a href="index.html"         class="nav__link">Home</a></li>
-        <li><a href="menu.html"          class="nav__link" aria-current="page">Menu</a></li>
-        <li><a href="index.html#hours"   class="nav__link">Hours</a></li>
-        <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+        <li><a href="index.html"       class="nav__link">Home</a></li>
+        <li><a href="menu.html"        class="nav__link" aria-current="page">Menu</a></li>
+        <li><a href="gallery.html"     class="nav__link">Gallery</a></li>
+        <li><a href="charcuterie.html" class="nav__link">Charcuterie</a></li>
+        <li><a href="catering.html"    class="nav__link">Catering</a></li>
       </ul>
 
       <button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -38,10 +41,11 @@
 
     <div class="nav__mobile" id="mobile-nav">
       <ul role="list">
-        <li><a href="index.html"         class="nav__link">Home</a></li>
-        <li><a href="menu.html"          class="nav__link" aria-current="page">Menu</a></li>
-        <li><a href="index.html#hours"   class="nav__link">Hours</a></li>
-        <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+        <li><a href="index.html"       class="nav__link">Home</a></li>
+        <li><a href="menu.html"        class="nav__link" aria-current="page">Menu</a></li>
+        <li><a href="gallery.html"     class="nav__link">Gallery</a></li>
+        <li><a href="charcuterie.html" class="nav__link">Charcuterie</a></li>
+        <li><a href="catering.html"    class="nav__link">Catering</a></li>
       </ul>
     </div>
   </nav>
@@ -65,402 +69,410 @@
     <!-- ============ MENU CONTENT ============ -->
     <div class="container">
 
+      <!-- ——— FILTER ——— -->
+      <div class="menu-filter" role="group" aria-label="Filter menu by category">
+        <button class="menu-filter__btn is-active" data-filter="all">All</button>
+        <button class="menu-filter__btn" data-filter="breakfast">Breakfast</button>
+        <button class="menu-filter__btn" data-filter="lunch">Lunch</button>
+        <button class="menu-filter__btn" data-filter="drinks">Drinks</button>
+      </div>
+
       <!-- ——— BREAKFAST ——— -->
-      <section class="menu-section" id="breakfast" aria-labelledby="breakfast-heading">
+      <section class="menu-section" id="breakfast" data-category="breakfast" aria-labelledby="breakfast-heading">
         <div class="menu-section__header reveal">
           <span class="eyebrow">All Day</span>
           <h2 class="menu-section__title" id="breakfast-heading">Breakfast</h2>
           <p class="menu-section__note">Served all day, every day.</p>
         </div>
 
-        <ul class="menu-items" role="list" aria-label="Breakfast items">
+        <div class="menu-items-grid">
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_cda93c3f0063495c91635de10c62551a~mv2.png"
-              alt="Fresh bagel with cream cheese"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Bagel with Cream Cheese</span>
-              </div>
-              <span class="menu-item__price">$4.25</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_4a4cf20551a1405085620dfd8ba5ea8c~mv2.jpg"
+                   alt="Breakfast sandwich with egg on English muffin" loading="lazy">
             </div>
-          </li>
-
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_4a4cf20551a1405085620dfd8ba5ea8c~mv2.jpg"
-              alt="Breakfast sandwich with egg on English muffin"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Breakfast Sandwich</span>
-                <span class="menu-item__desc">Ham, bacon, or sausage + egg on English muffin, bagel, or waffle</span>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Breakfast · All Day</p>
+              <h3 class="menu-card__name">Breakfast Sandwich</h3>
+              <p class="menu-card__desc">Ham, bacon, or sausage + egg on English muffin, bagel, or waffle.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$6.50</span>
               </div>
-              <span class="menu-item__price">$6.50</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_a22d7703bec942489751542832e0fc75~mv2.png"
-              alt="Golden waffle with butter and syrup"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Waffle</span>
-                <span class="menu-item__desc">With butter and syrup · Add fresh fruit +$2.00</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_b6b2d6caaacd45699b14599608b9270a~mv2.jpg"
+                   alt="Breakfast burrito with egg, cheese, and choice of meat" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Breakfast · All Day</p>
+              <h3 class="menu-card__name">Breakfast Burrito</h3>
+              <p class="menu-card__desc">Ham, bacon, or sausage + cheese + egg in flour tortilla.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$6.50</span>
               </div>
-              <span class="menu-item__price">$4.25</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_5cb542c96bf54dc99c5d8a663714ddb2~mv2.png"
-              alt="Fresh fruit cup with strawberries, cantaloupe, and grapes"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Fruit Cup</span>
-                <span class="menu-item__desc">Strawberries, cantaloupe, grapes</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_73476efa440f46798efe593f130aed0b~mv2.jpg"
+                   alt="Grande breakfast burrito served with a side" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Breakfast · All Day</p>
+              <h3 class="menu-card__name">Grande Breakfast Burrito</h3>
+              <p class="menu-card__desc">With a side.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$10.49</span>
               </div>
-              <span class="menu-item__price">$3.75</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_3a1e593dbbf247efb7b8211319ddae43~mv2.jpg"
-              alt="Freshly baked scone"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Scone</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_a22d7703bec942489751542832e0fc75~mv2.png"
+                   alt="Golden waffle with butter and syrup" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Breakfast · All Day</p>
+              <h3 class="menu-card__name">Waffle</h3>
+              <p class="menu-card__desc">With butter and syrup. Add fresh fruit +$2.00.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$4.25</span>
               </div>
-              <span class="menu-item__price">$2.49</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_d59efe917d1f424da0d8ad7e32be59d7~mv2.jpg"
-              alt="Stuffed scone with strawberry jam or Nutella filling"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Stuffed Scone</span>
-                <span class="menu-item__desc">Strawberry jam or Nutella</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_cda93c3f0063495c91635de10c62551a~mv2.png"
+                   alt="Fresh bagel with cream cheese" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Breakfast · All Day</p>
+              <h3 class="menu-card__name">Bagel with Cream Cheese</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$4.25</span>
               </div>
-              <span class="menu-item__price">$3.25</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_b1cf6e6b7f0645f6a14385d801369426~mv2.jpg"
-              alt="Freshly baked cookies"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Cookie</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_5cb542c96bf54dc99c5d8a663714ddb2~mv2.png"
+                   alt="Fresh fruit cup with strawberries, cantaloupe, and grapes" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Breakfast · All Day</p>
+              <h3 class="menu-card__name">Fruit Cup</h3>
+              <p class="menu-card__desc">Strawberries, cantaloupe, grapes.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$3.75</span>
               </div>
-              <span class="menu-item__price">$2.00</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_b6b2d6caaacd45699b14599608b9270a~mv2.jpg"
-              alt="Breakfast burrito with egg, cheese, and choice of meat"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Breakfast Burrito</span>
-                <span class="menu-item__desc">Ham, bacon, or sausage + cheese + egg in flour tortilla</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_d59efe917d1f424da0d8ad7e32be59d7~mv2.jpg"
+                   alt="Stuffed scone with strawberry jam or Nutella filling" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Breakfast · All Day</p>
+              <h3 class="menu-card__name">Stuffed Scone</h3>
+              <p class="menu-card__desc">Strawberry jam or Nutella.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$3.25</span>
               </div>
-              <span class="menu-item__price">$6.50</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_73476efa440f46798efe593f130aed0b~mv2.jpg"
-              alt="Grande breakfast burrito served with a side"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Grande Breakfast Burrito</span>
-                <span class="menu-item__desc">With a side</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_3a1e593dbbf247efb7b8211319ddae43~mv2.jpg"
+                   alt="Freshly baked scone" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Breakfast · All Day</p>
+              <h3 class="menu-card__name">Scone</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$2.49</span>
               </div>
-              <span class="menu-item__price">$10.49</span>
             </div>
-          </li>
+          </article>
 
-        </ul>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_b1cf6e6b7f0645f6a14385d801369426~mv2.jpg"
+                   alt="Freshly baked cookies" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Breakfast · All Day</p>
+              <h3 class="menu-card__name">Cookie</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$2.00</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </section>
 
       <!-- ——— LUNCH ——— -->
-      <section class="menu-section" id="lunch" aria-labelledby="lunch-heading">
+      <section class="menu-section" id="lunch" data-category="lunch" aria-labelledby="lunch-heading">
         <div class="menu-section__header reveal">
           <span class="eyebrow">From 11am</span>
           <h2 class="menu-section__title" id="lunch-heading">Lunch</h2>
           <p class="menu-section__note">Available starting at 11:00 AM.</p>
         </div>
 
-        <ul class="menu-items" role="list" aria-label="Lunch items">
+        <div class="menu-items-grid">
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_dbef4acac99243199083a1841929c17d~mv2.jpg"
-              alt="Classic French dip sandwich"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">French Dip</span>
-              </div>
-              <span class="menu-item__price">$13.95</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_2ed48242ffd248c3acfd577f1ae736c8~mv2.jpg"
+                   alt="Turkey pesto panini pressed and golden" loading="lazy">
             </div>
-          </li>
-
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_7398ee6ae65640f8ad99c85952ccc23f~mv2.jpg"
-              alt="BLTTA sandwich with bacon, turkey, lettuce, tomato, and avocado"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">BLTTA</span>
-                <span class="menu-item__desc">Bacon, Turkey, Lettuce, Tomato, Avocado</span>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Turkey Pesto Panini</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$13.25</span>
               </div>
-              <span class="menu-item__price">$13.49</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_2ed48242ffd248c3acfd577f1ae736c8~mv2.jpg"
-              alt="Turkey pesto panini pressed and golden"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Turkey Pesto Panini</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_dbef4acac99243199083a1841929c17d~mv2.jpg"
+                   alt="Classic French dip sandwich" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">French Dip</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$13.95</span>
               </div>
-              <span class="menu-item__price">$13.25</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_ff4797f3e6db46f6a9b967136f6e7bf0~mv2.jpg"
-              alt="Chicken chipotle panini with smoky chipotle sauce"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Chicken Chipotle Panini</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_5e634016f09f4543b180eb06b8483758~mv2.jpg"
+                   alt="Spicy French dip sandwich with au jus" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Spicy French Dip</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$14.25</span>
               </div>
-              <span class="menu-item__price">$13.95</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_601896e3308a4a74aff21ed28751a039~mv2.jpg"
-              alt="Chicken quesadilla with melted cheese"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Chicken Quesadilla</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_7398ee6ae65640f8ad99c85952ccc23f~mv2.jpg"
+                   alt="BLTTA sandwich with bacon, turkey, lettuce, tomato, and avocado" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">BLTTA</h3>
+              <p class="menu-card__desc">Bacon, Turkey, Lettuce, Tomato, Avocado.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$13.49</span>
               </div>
-              <span class="menu-item__price">$11.25</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_f4da81f96bd04c44adc96f7995f4ba81~mv2.jpg"
-              alt="Classic grilled cheese sandwich"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Grilled Cheese</span>
-                <span class="menu-item__desc">Add meat +$2.50</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_ff4797f3e6db46f6a9b967136f6e7bf0~mv2.jpg"
+                   alt="Chicken chipotle panini" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Chicken Chipotle Panini</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$13.95</span>
               </div>
-              <span class="menu-item__price">$9.99</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_54dc5d0d709c423988c542892fba63f0~mv2.jpg"
-              alt="Tuna panini melt with melted cheese"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Tuna Panini Melt</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_601896e3308a4a74aff21ed28751a039~mv2.jpg"
+                   alt="Chicken quesadilla with melted cheese" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Chicken Quesadilla</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$11.25</span>
               </div>
-              <span class="menu-item__price">$11.99</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_5e634016f09f4543b180eb06b8483758~mv2.jpg"
-              alt="Spicy French dip sandwich with au jus"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Spicy French Dip</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_f7142d09baa84af58da083928a2501bf~mv2.jpg"
+                   alt="BBQ chicken wrap" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">BBQ Chicken Wrap</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$12.99</span>
               </div>
-              <span class="menu-item__price">$14.25</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_f7142d09baa84af58da083928a2501bf~mv2.jpg"
-              alt="BBQ chicken wrap with tangy barbecue sauce"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">BBQ Chicken Wrap</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_54dc5d0d709c423988c542892fba63f0~mv2.jpg"
+                   alt="Tuna panini melt" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Tuna Panini Melt</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$11.99</span>
               </div>
-              <span class="menu-item__price">$12.99</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_a08b12c3f4a147898889026c2923d6a5~mv2.jpg"
-              alt="Fresh garden salad with mixed greens and vegetables"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Garden Salad</span>
-                <span class="menu-item__desc">Add meat +$2.50</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_f4da81f96bd04c44adc96f7995f4ba81~mv2.jpg"
+                   alt="Classic grilled cheese sandwich" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Grilled Cheese</h3>
+              <p class="menu-card__desc">Add meat +$2.50.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$9.99</span>
               </div>
-              <span class="menu-item__price">$9.99</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_e5a4a96ea0d744848acb3804f84210221~mv2.jpg"
-              alt="Hearty chef salad loaded with fresh ingredients"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Chef Salad</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_e5a4a96ea0d744848acb3804f84210221~mv2.jpg"
+                   alt="Hearty chef salad" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Chef Salad</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$13.75</span>
               </div>
-              <span class="menu-item__price">$13.75</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_a08b12c3f4a147898889026c2923d6a5~mv2.jpg"
-              alt="Side salad with fresh greens"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Side Salad</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_a08b12c3f4a147898889026c2923d6a5~mv2.jpg"
+                   alt="Fresh garden salad" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Garden Salad</h3>
+              <p class="menu-card__desc">Add meat +$2.50.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$9.99</span>
               </div>
-              <span class="menu-item__price">$5.99</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_70eee3fc04e3406a9f96d4f90b140221~mv2.webp"
-              alt="Cup of warm homemade soup"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Cup of Soup</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_a08b12c3f4a147898889026c2923d6a5~mv2.jpg"
+                   alt="Side salad" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Side Salad</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$5.99</span>
               </div>
-              <span class="menu-item__price">$4.49</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal reveal--delay-1">
-            <img
-              src="https://static.wixstatic.com/media/660fac_0881c520fa724573be2c902ca56b5d20~mv2.jpg"
-              alt="Bowl of warm homemade soup"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Bowl of Soup</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_70eee3fc04e3406a9f96d4f90b140221~mv2.webp"
+                   alt="Cup of warm homemade soup" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Cup of Soup</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$4.49</span>
               </div>
-              <span class="menu-item__price">$6.49</span>
             </div>
-          </li>
+          </article>
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_ff4797f3e6db46f6a9b967136f6e7bf0~mv2.jpg"
-              alt="Potato chips side"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Potato Chips</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_0881c520fa724573be2c902ca56b5d20~mv2.jpg"
+                   alt="Bowl of warm homemade soup" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Bowl of Soup</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$6.49</span>
               </div>
-              <span class="menu-item__price">$2.00</span>
             </div>
-          </li>
+          </article>
 
-        </ul>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_ff4797f3e6db46f6a9b967136f6e7bf0~mv2.jpg"
+                   alt="Potato chips" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Lunch · From 11am</p>
+              <h3 class="menu-card__name">Potato Chips</h3>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$2.00</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </section>
 
       <!-- ——— DRINKS ——— -->
-      <section class="menu-section" id="drinks" aria-labelledby="drinks-heading">
+      <section class="menu-section" id="drinks" data-category="drinks" aria-labelledby="drinks-heading">
         <div class="menu-section__header reveal">
           <span class="eyebrow">Refreshments</span>
           <h2 class="menu-section__title" id="drinks-heading">Drinks</h2>
         </div>
 
-        <ul class="menu-items" role="list" aria-label="Drink items">
+        <div class="menu-items-grid">
 
-          <li class="menu-item reveal">
-            <img
-              src="https://static.wixstatic.com/media/660fac_b55a9b78dc0248e19a681d60c1933b81~mv2.jpg"
-              alt="Assorted bottled beverages including soda, iced tea, lemonade, juice, and water"
-              class="menu-item__img"
-              loading="lazy">
-            <div class="menu-item__body">
-              <div class="menu-item__info">
-                <span class="menu-item__name">Bottled Beverages</span>
-                <span class="menu-item__desc">Soda, iced tea, lemonade, juice, water</span>
-              </div>
-              <span class="menu-item__price">$2.50</span>
+          <article class="menu-card reveal">
+            <div class="menu-card__image">
+              <img src="https://static.wixstatic.com/media/660fac_b55a9b78dc0248e19a681d60c1933b81~mv2.jpg"
+                   alt="Assorted bottled beverages" loading="lazy">
             </div>
-          </li>
+            <div class="menu-card__body">
+              <p class="menu-card__category">Drinks</p>
+              <h3 class="menu-card__name">Bottled Beverages</h3>
+              <p class="menu-card__desc">Soda, iced tea, lemonade, juice, water.</p>
+              <div class="menu-card__footer">
+                <span class="menu-card__price">$2.50</span>
+              </div>
+            </div>
+          </article>
 
-        </ul>
+        </div>
       </section>
 
     </div><!-- /container -->
@@ -481,7 +493,7 @@
           </a>
           <p class="footer__tagline">Good coffee, great food, and warm hospitality in the heart of Tacoma.</p>
           <div class="footer__social" aria-label="Social media">
-            <a href="https://instagram.com/sofis_corner_cafe"
+            <a href="https://www.instagram.com/sofiscornercafe/"
                class="footer__social-link"
                target="_blank"
                rel="noopener noreferrer"
@@ -498,10 +510,11 @@
         <div>
           <h3 class="footer__col-heading">Navigate</h3>
           <ul class="footer__links" role="list">
-            <li><a href="index.html"         class="footer__link">Home</a></li>
-            <li><a href="menu.html"          class="footer__link">Menu</a></li>
-            <li><a href="index.html#hours"   class="footer__link">Hours</a></li>
-            <li><a href="index.html#contact" class="footer__link">Location</a></li>
+            <li><a href="index.html"       class="footer__link">Home</a></li>
+            <li><a href="menu.html"        class="footer__link">Menu</a></li>
+            <li><a href="gallery.html"     class="footer__link">Gallery</a></li>
+            <li><a href="charcuterie.html" class="footer__link">Charcuterie</a></li>
+            <li><a href="catering.html"    class="footer__link">Catering</a></li>
           </ul>
         </div>
 
@@ -549,6 +562,47 @@
       });
     });
 
+    // === OPEN / CLOSED STATUS BADGE ===
+    function updateStatus() {
+      const now = new Date();
+      const la  = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+      const day  = la.getDay();
+      const mins = la.getHours() * 60 + la.getMinutes();
+      const isWeekend = day === 0 || day === 6;
+      const open = isWeekend ? (mins >= 480 && mins < 960) : (mins >= 420 && mins < 960);
+      document.querySelectorAll('.status-badge').forEach(badge => {
+        badge.classList.toggle('status-badge--open',   open);
+        badge.classList.toggle('status-badge--closed', !open);
+        badge.querySelector('.status-text').textContent = open ? 'Open Now' : 'Closed';
+      });
+    }
+    updateStatus();
+    setInterval(updateStatus, 60000);
+
+    // === MENU FILTER ===
+    const filterBtns = document.querySelectorAll('.menu-filter__btn');
+    const sections   = document.querySelectorAll('.menu-section[data-category]');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const filter = btn.dataset.filter;
+        sections.forEach(sec => {
+          if (filter === 'all' || sec.dataset.category === filter) {
+            sec.style.display = '';
+            requestAnimationFrame(() => { sec.style.opacity = '1'; });
+          } else {
+            sec.style.opacity = '0';
+            sec.addEventListener('transitionend', function hide() {
+              if (sec.style.opacity === '0') sec.style.display = 'none';
+              sec.removeEventListener('transitionend', hide);
+            });
+          }
+        });
+      });
+    });
+
     // === SCROLL REVEAL ===
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -567,5 +621,17 @@
       document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     }
   </script>
+  <!-- FLOATING ORDER BUTTON -->
+  <div class="order-fab-wrap">
+    <a href="ORDER_LINK_HERE" class="order-fab" target="_blank" rel="noopener noreferrer" aria-label="Order now online">
+      <svg class="order-fab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 2 L4 6 H20 L18 2"/>
+        <path d="M4 6l1.5 11a2 2 0 002 1.7h9a2 2 0 002-1.7L20 6"/>
+        <path d="M9 11a3 3 0 006 0"/>
+      </svg>
+      Order Now
+    </a>
+  </div>
+
 </body>
 </html>

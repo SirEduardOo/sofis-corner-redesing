@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sofi's Corner Cafe Charcuterie Boards — handcrafted boards for every occasion. Small, Medium, and Large options available. Call to order.">
+  <title>Charcuterie — Sofi's Corner Cafe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__container">
+
+      <div class="nav__brand">
+        <a href="index.html" class="nav__logo">
+          <img
+            src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
+            alt="Sofi's Corner Cafe"
+            class="nav__logo-img">
+        </a>
+      </div>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"       class="nav__link">Home</a></li>
+        <li><a href="menu.html"        class="nav__link">Menu</a></li>
+        <li><a href="gallery.html"     class="nav__link">Gallery</a></li>
+        <li><a href="charcuterie.html" class="nav__link" aria-current="page">Charcuterie</a></li>
+        <li><a href="catering.html"    class="nav__link">Catering</a></li>
+      </ul>
+
+      <button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="mobile-nav">
+      <ul role="list">
+        <li><a href="index.html"       class="nav__link">Home</a></li>
+        <li><a href="menu.html"        class="nav__link">Menu</a></li>
+        <li><a href="gallery.html"     class="nav__link">Gallery</a></li>
+        <li><a href="charcuterie.html" class="nav__link" aria-current="page">Charcuterie</a></li>
+        <li><a href="catering.html"    class="nav__link">Catering</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============ PAGE HERO ============ -->
+    <header class="page-hero" aria-labelledby="charc-page-title">
+      <img
+        src="https://static.wixstatic.com/media/660fac_2ed48242ffd248c3acfd577f1ae736c8~mv2.jpg"
+        alt="Beautifully arranged food at Sofi's Corner Cafe"
+        class="page-hero__img">
+      <div class="page-hero__overlay" aria-hidden="true"></div>
+      <div class="page-hero__content">
+        <span class="eyebrow" style="color:var(--accent)">Handcrafted</span>
+        <h1 id="charc-page-title">Charcuterie Boards</h1>
+        <p>Artisan boards made with care — perfect for every occasion.</p>
+      </div>
+    </header>
+
+    <!-- ============ BOARDS ============ -->
+    <section class="section" aria-labelledby="boards-heading">
+      <div class="container">
+        <div class="menu-preview__header reveal">
+          <span class="eyebrow">Our Boards</span>
+          <h2 id="boards-heading">Choose Your Size</h2>
+          <p style="color:var(--text-muted);max-width:520px;margin:0 auto">Each board is thoughtfully assembled with premium meats, cheeses, seasonal fruits, nuts, and house-made accompaniments.</p>
+        </div>
+
+        <div class="boards-grid">
+
+          <article class="board-card reveal">
+            <div class="board-card__header">
+              <span class="board-card__size">Small</span>
+              <span class="board-card__price">$45</span>
+            </div>
+            <p class="board-card__desc">Perfect for 2–3 guests. A curated selection of meats and cheeses with seasonal accents.</p>
+            <ul class="board-card__includes" aria-label="Small board includes">
+              <li>2 premium meats</li>
+              <li>2 artisan cheeses</li>
+              <li>Seasonal fruit &amp; nuts</li>
+              <li>House crackers &amp; spreads</li>
+            </ul>
+            <div class="board-card__serves">Serves 2–3</div>
+          </article>
+
+          <article class="board-card board-card--featured reveal reveal--delay-1">
+            <span class="board-card__badge">Most Popular</span>
+            <div class="board-card__header">
+              <span class="board-card__size">Medium</span>
+              <span class="board-card__price">$75</span>
+            </div>
+            <p class="board-card__desc">Our most requested size. Generous variety for a memorable gathering or gift.</p>
+            <ul class="board-card__includes" aria-label="Medium board includes">
+              <li>3 premium meats</li>
+              <li>3 artisan cheeses</li>
+              <li>Seasonal fruit, grapes &amp; berries</li>
+              <li>Mixed nuts &amp; dried fruits</li>
+              <li>House crackers, jam &amp; honey</li>
+            </ul>
+            <div class="board-card__serves">Serves 4–6</div>
+          </article>
+
+          <article class="board-card reveal reveal--delay-2">
+            <div class="board-card__header">
+              <span class="board-card__size">Large</span>
+              <span class="board-card__price">$110</span>
+            </div>
+            <p class="board-card__desc">Impressive and abundant — ideal for celebrations, corporate events, and larger gatherings.</p>
+            <ul class="board-card__includes" aria-label="Large board includes">
+              <li>4+ premium meats</li>
+              <li>4+ artisan cheeses</li>
+              <li>Abundant seasonal fruit</li>
+              <li>Mixed nuts, olives &amp; pickles</li>
+              <li>Artisan breads &amp; crackers</li>
+              <li>Multiple jams, honey &amp; mustard</li>
+            </ul>
+            <div class="board-card__serves">Serves 8–12</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PERFECT FOR ============ -->
+    <section class="section section--alt" aria-labelledby="perfect-heading">
+      <div class="container">
+        <div class="menu-preview__header reveal">
+          <span class="eyebrow">Occasions</span>
+          <h2 id="perfect-heading">Perfect For</h2>
+        </div>
+
+        <div class="perfect-for-grid">
+
+          <div class="perfect-card reveal">
+            <div class="perfect-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                <path d="M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <h3>Events &amp; Parties</h3>
+            <p>Elevate any gathering with a beautiful spread your guests will talk about.</p>
+          </div>
+
+          <div class="perfect-card reveal reveal--delay-1">
+            <div class="perfect-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </div>
+            <h3>Birthdays</h3>
+            <p>Make their day extra special with a personalized board crafted just for the celebration.</p>
+          </div>
+
+          <div class="perfect-card reveal reveal--delay-2">
+            <div class="perfect-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+              </svg>
+            </div>
+            <h3>Corporate</h3>
+            <p>Impress clients and reward your team with a premium, professionally curated board.</p>
+          </div>
+
+          <div class="perfect-card reveal reveal--delay-3">
+            <div class="perfect-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <h3>Weddings</h3>
+            <p>A stunning addition to your cocktail hour or reception — elegant and unforgettable.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section" aria-labelledby="charc-cta-heading">
+      <div class="container" style="text-align:center">
+        <span class="eyebrow reveal">Ready to Order?</span>
+        <h2 class="reveal reveal--delay-1" id="charc-cta-heading">Give Us a Call</h2>
+        <p class="reveal reveal--delay-2" style="color:var(--text-muted);max-width:480px;margin:0 auto var(--space-8)">
+          Boards are made fresh to order. Call ahead so we can prepare something perfect for your occasion.
+        </p>
+        <a href="tel:+12533024749" class="btn btn--primary reveal reveal--delay-3" style="font-size:1.1rem;padding:var(--space-4) var(--space-10)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="margin-right:8px;vertical-align:middle" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/>
+          </svg>
+          (253) 302-4749
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div>
+          <a href="index.html" aria-label="Sofi's Corner Cafe — Home">
+            <img
+              src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
+              alt="Sofi's Corner Cafe logo"
+              class="footer__logo-img">
+          </a>
+          <p class="footer__tagline">Good coffee, great food, and warm hospitality in the heart of Tacoma.</p>
+          <div class="footer__social" aria-label="Social media">
+            <a href="https://www.instagram.com/sofiscornercafe/"
+               class="footer__social-link"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Sofi's Corner Cafe on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__col-heading">Navigate</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html"       class="footer__link">Home</a></li>
+            <li><a href="menu.html"        class="footer__link">Menu</a></li>
+            <li><a href="gallery.html"     class="footer__link">Gallery</a></li>
+            <li><a href="charcuterie.html" class="footer__link">Charcuterie</a></li>
+            <li><a href="catering.html"    class="footer__link">Catering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__col-heading">Hours</h3>
+          <ul class="footer__links" role="list">
+            <li><span class="footer__link">Mon – Fri: 7am – 4pm</span></li>
+            <li><span class="footer__link">Sat – Sun: 8am – 4pm</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Sofi's Corner Cafe. All rights reserved.</p>
+        <p class="footer__copyright">6450 Tacoma Mall Blvd, Tacoma, WA 98409</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // === NAV SCROLL STATE ===
+    const nav = document.getElementById('nav');
+    function onScroll() {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // === MOBILE NAV TOGGLE ===
+    const toggle    = document.querySelector('.nav__toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    toggle.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    });
+
+    mobileNav.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation menu');
+      });
+    });
+
+    // === OPEN / CLOSED STATUS BADGE ===
+    function updateStatus() {
+      const now = new Date();
+      const la  = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+      const day  = la.getDay();
+      const mins = la.getHours() * 60 + la.getMinutes();
+      const isWeekend = day === 0 || day === 6;
+      const open = isWeekend ? (mins >= 480 && mins < 960) : (mins >= 420 && mins < 960);
+      document.querySelectorAll('.status-badge').forEach(badge => {
+        badge.classList.toggle('status-badge--open',   open);
+        badge.classList.toggle('status-badge--closed', !open);
+        badge.querySelector('.status-text').textContent = open ? 'Open Now' : 'Closed';
+      });
+    }
+    updateStatus();
+    setInterval(updateStatus, 60000);
+
+    // === SCROLL REVEAL ===
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.06, rootMargin: '0px 0px -28px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    }
+  </script>
+  <!-- FLOATING ORDER BUTTON -->
+  <div class="order-fab-wrap">
+    <a href="ORDER_LINK_HERE" class="order-fab" target="_blank" rel="noopener noreferrer" aria-label="Order now online">
+      <svg class="order-fab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 2 L4 6 H20 L18 2"/>
+        <path d="M4 6l1.5 11a2 2 0 002 1.7h9a2 2 0 002-1.7L20 6"/>
+        <path d="M9 11a3 3 0 006 0"/>
+      </svg>
+      Order Now
+    </a>
+  </div>
+
+</body>
+</html>

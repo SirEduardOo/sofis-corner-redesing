@@ -6,6 +6,8 @@
   <meta name="description" content="Sofi's Corner Cafe — cozy café and casual restaurant in Tacoma, WA. Fresh breakfast, lunch, and drinks. Open Mon–Fri 7am–4pm, Sat–Sun 8am–4pm.">
   <title>Sofi's Corner Cafe — Tacoma, WA</title>
   <link rel="stylesheet" href="styles.css">
+  <meta http-equiv="refresh" content="0; url=menu.html">
+  <script>window.location.replace("menu.html");</script>
 </head>
 <body>
 
@@ -13,18 +15,21 @@
   <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__container">
 
-      <a href="index.html" class="nav__logo">
-        <img
-          src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
-          alt="Sofi's Corner Cafe"
-          class="nav__logo-img">
-      </a>
+      <div class="nav__brand">
+        <a href="index.html" class="nav__logo">
+          <img
+            src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
+            alt="Sofi's Corner Cafe"
+            class="nav__logo-img">
+        </a>
+      </div>
 
       <ul class="nav__links" role="list">
-        <li><a href="index.html" class="nav__link" aria-current="page">Home</a></li>
-        <li><a href="menu.html"  class="nav__link">Menu</a></li>
-        <li><a href="#hours"     class="nav__link">Hours</a></li>
-        <li><a href="#contact"   class="nav__link">Contact</a></li>
+        <li><a href="index.html"       class="nav__link" aria-current="page">Home</a></li>
+        <li><a href="menu.html"        class="nav__link">Menu</a></li>
+        <li><a href="gallery.html"     class="nav__link">Gallery</a></li>
+        <li><a href="charcuterie.html" class="nav__link">Charcuterie</a></li>
+        <li><a href="catering.html"    class="nav__link">Catering</a></li>
       </ul>
 
       <button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -38,10 +43,11 @@
 
     <div class="nav__mobile" id="mobile-nav">
       <ul role="list">
-        <li><a href="index.html" class="nav__link" aria-current="page">Home</a></li>
-        <li><a href="menu.html"  class="nav__link">Menu</a></li>
-        <li><a href="#hours"     class="nav__link">Hours</a></li>
-        <li><a href="#contact"   class="nav__link">Contact</a></li>
+        <li><a href="index.html"       class="nav__link" aria-current="page">Home</a></li>
+        <li><a href="menu.html"        class="nav__link">Menu</a></li>
+        <li><a href="gallery.html"     class="nav__link">Gallery</a></li>
+        <li><a href="charcuterie.html" class="nav__link">Charcuterie</a></li>
+        <li><a href="catering.html"    class="nav__link">Catering</a></li>
       </ul>
     </div>
   </nav>
@@ -212,7 +218,13 @@
           <!-- Info column -->
           <div>
             <span class="eyebrow reveal">Visit Us</span>
-            <h2 class="location__heading reveal reveal--delay-1" id="hours-heading">Hours &amp; Info</h2>
+            <div class="hours__title-row">
+              <h2 class="location__heading reveal reveal--delay-1" id="hours-heading">Hours &amp; Info</h2>
+              <span class="status-badge" aria-live="polite">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span class="status-text">Open Now</span>
+              </span>
+            </div>
 
             <ul class="hours__list reveal reveal--delay-2" aria-label="Business hours">
               <li class="hours__item">
@@ -306,10 +318,11 @@
         <div>
           <h3 class="footer__col-heading">Navigate</h3>
           <ul class="footer__links" role="list">
-            <li><a href="index.html" class="footer__link">Home</a></li>
-            <li><a href="menu.html"  class="footer__link">Menu</a></li>
-            <li><a href="#hours"     class="footer__link">Hours</a></li>
-            <li><a href="#contact"   class="footer__link">Location</a></li>
+            <li><a href="index.html"       class="footer__link">Home</a></li>
+            <li><a href="menu.html"        class="footer__link">Menu</a></li>
+            <li><a href="gallery.html"     class="footer__link">Gallery</a></li>
+            <li><a href="charcuterie.html" class="footer__link">Charcuterie</a></li>
+            <li><a href="catering.html"    class="footer__link">Catering</a></li>
           </ul>
         </div>
 
@@ -356,6 +369,7 @@
         toggle.setAttribute('aria-label', 'Open navigation menu');
       });
     });
+
 
     // === SCROLL REVEAL ===
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
