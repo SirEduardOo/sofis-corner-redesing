@@ -1719,3 +1719,95 @@ p  { line-height: 1.72; }
 @media (min-width: 900px) {
   .menu-items-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* ================================================
+   SPLIT HERO — Catering & Charcuterie
+   ================================================ */
+.split-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 92vh;
+  background: var(--primary);
+}
+.split-hero__content {
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(2rem, 5vw, 4.5rem);
+  padding-top: calc(var(--nav-height) + clamp(2.5rem, 6vw, 5rem));
+}
+.split-hero__eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+.split-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: var(--space-6);
+}
+.split-hero__desc {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  max-width: 420px;
+  margin-bottom: var(--space-10);
+}
+.split-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  align-self: flex-start;
+  padding: var(--space-4) var(--space-8);
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: all var(--normal) var(--ease);
+}
+.split-hero__cta:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.split-hero__image {
+  position: relative;
+  overflow: hidden;
+}
+.split-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--slow) var(--ease);
+}
+.split-hero__image:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .split-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .split-hero__image {
+    height: 52vw;
+    min-height: 240px;
+    order: -1;
+  }
+  .split-hero__content {
+    padding: clamp(2rem, 6vw, 3rem) var(--space-6);
+  }
+  .split-hero__title { font-size: clamp(2rem, 7vw, 3rem); }
+}

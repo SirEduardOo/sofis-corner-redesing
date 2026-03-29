@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sofi's Corner Cafe — cozy café and casual restaurant in Tacoma, WA. Fresh breakfast, lunch, and drinks. Open Mon–Fri 7am–4pm, Sat–Sun 8am–4pm.">
+  <title>Sofi's Corner Cafe — Tacoma, WA</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__container">
+
+      <div class="nav__brand">
+        <a href="index.html" class="nav__logo">
+          <img
+            src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
+            alt="Sofi's Corner Cafe"
+            class="nav__logo-img">
+        </a>
+      </div>
+
+      <ul class="nav__links" role="list">
+        <li><a href="home.html"       class="nav__link" aria-current="page">Home</a></li>
+        <li><a href="index.html"        class="nav__link">Menu</a></li>
+        <li><a href="charcuterie.html" class="nav__link">Charcuterie</a></li>
+        <li><a href="catering.html"    class="nav__link">Catering</a></li>
+      </ul>
+
+      <button class="nav__toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="mobile-nav">
+      <ul role="list">
+        <li><a href="home.html"       class="nav__link" aria-current="page">Home</a></li>
+        <li><a href="index.html"        class="nav__link">Menu</a></li>
+        <li><a href="charcuterie.html" class="nav__link">Charcuterie</a></li>
+        <li><a href="catering.html"    class="nav__link">Catering</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Welcome to Sofi's Corner Cafe">
+      <div class="hero__bg">
+        <img
+          src="https://static.wixstatic.com/media/660fac_f957ec74014f4c15875c707c3a2be1a3~mv2.jpg"
+          alt="Exterior of Sofi's Corner Cafe in Tacoma, WA"
+          class="hero__img">
+        <div class="hero__overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content">
+        <span class="hero__eyebrow">Tacoma, Washington</span>
+        <h1 class="hero__title">Where Every Cup<br>Tells a Story</h1>
+        <p class="hero__subtitle">Fresh food, warm atmosphere, and coffee crafted with care — every single day.</p>
+        <a href="menu.html" class="hero__cta">Explore Our Menu</a>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ============ OUR STORY ============ -->
+    <section class="section" id="story" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="story__grid">
+
+          <!-- Text column -->
+          <div>
+            <span class="eyebrow reveal">Our Story</span>
+            <h2 class="story__title reveal reveal--delay-1" id="story-heading">A Corner Worth Finding</h2>
+            <p class="story__text reveal reveal--delay-2">
+              Sofi's Corner Cafe was born from a simple belief: that good food and good coffee have the power to bring people together. Nestled in the heart of Tacoma, we're your neighborhood spot for a slow morning, a quick lunch, or anything in between.
+            </p>
+            <p class="story__text reveal reveal--delay-3">
+              Everything we serve is made with intention — from our scratch-made waffles to our carefully crafted sandwiches. Come as you are. Stay as long as you like.
+            </p>
+            <div class="story__divider reveal reveal--delay-4"></div>
+          </div>
+
+          <!-- Image column -->
+          <div class="reveal reveal--delay-2">
+            <img
+              src="https://static.wixstatic.com/media/660fac_1a75d5efac10486bacba7bb75b56e403~mv2.jpg"
+              alt="Warm and cozy interior of Sofi's Corner Cafe"
+              class="story__img"
+              loading="lazy">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU PREVIEW ============ -->
+    <section class="section section--alt" id="menu-preview" aria-labelledby="menu-preview-heading">
+      <div class="container">
+        <div class="menu-preview__header reveal">
+          <span class="eyebrow">From Our Kitchen</span>
+          <h2 id="menu-preview-heading">Made to Delight</h2>
+        </div>
+
+        <div class="menu-preview__grid">
+
+          <!-- Waffle -->
+          <article class="menu-card reveal reveal--delay-1">
+            <a href="menu.html#breakfast" aria-label="View Classic Waffle on full menu">
+              <div class="menu-card__image">
+                <img
+                  src="https://static.wixstatic.com/media/660fac_a22d7703bec942489751542832e0fc75~mv2.png"
+                  alt="Golden waffle with butter and syrup at Sofi's Corner Cafe"
+                  loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <p class="menu-card__category">Breakfast · All Day</p>
+                <h3 class="menu-card__name">Classic Waffle</h3>
+                <p class="menu-card__desc">Golden waffle with butter and syrup. Add fresh fruit for an extra treat.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$4.25</span>
+                  <span class="menu-card__link">View Menu</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Breakfast Burrito -->
+          <article class="menu-card reveal reveal--delay-2">
+            <a href="menu.html#breakfast" aria-label="View Breakfast Burrito on full menu">
+              <div class="menu-card__image">
+                <img
+                  src="https://static.wixstatic.com/media/660fac_b6b2d6caaacd45699b14599608b9270a~mv2.jpg"
+                  alt="Breakfast burrito with eggs, cheese, and your choice of meat"
+                  loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <p class="menu-card__category">Breakfast · All Day</p>
+                <h3 class="menu-card__name">Breakfast Burrito</h3>
+                <p class="menu-card__desc">Ham, bacon, or sausage with cheese and egg, wrapped in a flour tortilla.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$6.50</span>
+                  <span class="menu-card__link">View Menu</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Turkey Pesto Panini -->
+          <article class="menu-card reveal reveal--delay-3">
+            <a href="menu.html#lunch" aria-label="View Turkey Pesto Panini on full menu">
+              <div class="menu-card__image">
+                <img
+                  src="https://static.wixstatic.com/media/660fac_2ed48242ffd248c3acfd577f1ae736c8~mv2.jpg"
+                  alt="Turkey pesto panini pressed to perfection"
+                  loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <p class="menu-card__category">Lunch · From 11am</p>
+                <h3 class="menu-card__name">Turkey Pesto Panini</h3>
+                <p class="menu-card__desc">Pressed to perfection with turkey and vibrant basil pesto. A lunchtime favorite.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$13.25</span>
+                  <span class="menu-card__link">View Menu</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Chef Salad -->
+          <article class="menu-card reveal reveal--delay-4">
+            <a href="menu.html#lunch" aria-label="View Chef Salad on full menu">
+              <div class="menu-card__image">
+                <img
+                  src="https://static.wixstatic.com/media/660fac_e5a4a96ea0d744848acb3804f84210221~mv2.jpg"
+                  alt="Chef salad loaded with fresh ingredients"
+                  loading="lazy">
+              </div>
+              <div class="menu-card__body">
+                <p class="menu-card__category">Lunch · From 11am</p>
+                <h3 class="menu-card__name">Chef Salad</h3>
+                <p class="menu-card__desc">A hearty salad loaded with fresh ingredients — light, satisfying, full of flavor.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$13.75</span>
+                  <span class="menu-card__link">View Menu</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div>
+
+        <div class="menu-preview__cta reveal">
+          <a href="menu.html" class="btn btn--primary">See Full Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOURS & LOCATION ============ -->
+    <section class="section" id="hours" aria-labelledby="hours-heading">
+      <div class="container">
+        <div class="location__grid">
+
+          <!-- Info column -->
+          <div>
+            <span class="eyebrow reveal">Visit Us</span>
+            <div class="hours__title-row">
+              <h2 class="location__heading reveal reveal--delay-1" id="hours-heading">Hours &amp; Info</h2>
+              <span class="status-badge" aria-live="polite">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span class="status-text">Open Now</span>
+              </span>
+            </div>
+
+            <ul class="hours__list reveal reveal--delay-2" aria-label="Business hours">
+              <li class="hours__item">
+                <span class="hours__day">Monday – Friday</span>
+                <span class="hours__time">7:00 AM – 4:00 PM</span>
+              </li>
+              <li class="hours__item">
+                <span class="hours__day">Saturday – Sunday</span>
+                <span class="hours__time">8:00 AM – 4:00 PM</span>
+              </li>
+            </ul>
+
+            <address class="location__contact reveal reveal--delay-3">
+              <div class="location__contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                <span>6450 Tacoma Mall Blvd, Tacoma, WA 98409</span>
+              </div>
+              <div class="location__contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/>
+                </svg>
+                <a href="tel:+12533024749">(253) 302-4749</a>
+              </div>
+              <div class="location__contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <a href="mailto:sofiscornercafe@gmail.com">sofiscornercafe@gmail.com</a>
+              </div>
+              <div class="location__contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                <a href="https://www.instagram.com/sofiscornercafe/" target="_blank" rel="noopener noreferrer">@sofiscornercafe</a>
+              </div>
+            </address>
+          </div>
+
+          <!-- Map column -->
+          <div id="contact">
+            <div class="map-container reveal" role="region" aria-label="Map showing Sofi's Corner Cafe location">
+              <iframe
+                src="https://maps.google.com/maps?q=6450+Tacoma+Mall+Blvd+Tacoma+WA+98409&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Sofi's Corner Cafe on Google Maps"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div>
+          <a href="index.html" aria-label="Sofi's Corner Cafe — Home">
+            <img
+              src="https://static.wixstatic.com/media/660fac_09fa6c34293644a98d247dbfc926543f~mv2.png"
+              alt="Sofi's Corner Cafe logo"
+              class="footer__logo-img">
+          </a>
+          <p class="footer__tagline">Good coffee, great food, and warm hospitality in the heart of Tacoma.</p>
+          <div class="footer__social" aria-label="Social media">
+            <a href="https://www.instagram.com/sofiscornercafe/"
+               class="footer__social-link"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Sofi's Corner Cafe on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__col-heading">Navigate</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="home.html"       class="footer__link">Home</a></li>
+            <li><a href="index.html"        class="footer__link">Menu</a></li>
+            <li><a href="charcuterie.html" class="footer__link">Charcuterie</a></li>
+            <li><a href="catering.html"    class="footer__link">Catering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__col-heading">Hours</h3>
+          <ul class="footer__links" role="list">
+            <li><span class="footer__link">Mon – Fri: 7am – 4pm</span></li>
+            <li><span class="footer__link">Sat – Sun: 8am – 4pm</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Sofi's Corner Cafe. All rights reserved.</p>
+        <p class="footer__copyright">6450 Tacoma Mall Blvd, Tacoma, WA 98409</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // === NAV SCROLL STATE ===
+    const nav = document.getElementById('nav');
+    function onScroll() {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // === MOBILE NAV TOGGLE ===
+    const toggle    = document.querySelector('.nav__toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    toggle.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    });
+
+    mobileNav.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation menu');
+      });
+    });
+
+
+    // === SCROLL REVEAL ===
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    }
+  </script>
+</body>
+</html>
