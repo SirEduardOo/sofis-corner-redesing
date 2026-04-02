@@ -108,85 +108,97 @@
       </div>
     </section>
 
-    <!-- ============ TODAY'S PICKS ============ -->
+    <!-- ============ SPECIALS & SEASONAL ============ -->
     <section class="section section--alt" id="specials" aria-labelledby="specials-heading">
       <div class="container">
 
         <div class="specials__header reveal">
           <div>
-            <span class="eyebrow">Fresh Every Day</span>
-            <h2 id="specials-heading">What's Good Right Now</h2>
-            <p class="specials__subtitle">Specials, seasonal favorites &amp; chef's picks — made fresh this morning.</p>
+            <span class="eyebrow">Rotating Specials</span>
+            <h2 id="specials-heading">Seasonal &amp; Special Dishes</h2>
+            <p class="specials__subtitle">Crafted with whatever's fresh and in season — these change, so enjoy them while they last.</p>
           </div>
-          <a href="index.html" class="btn btn--outline specials__header-cta">Full Menu</a>
+          <div class="specials__header-note reveal">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Specials rotate weekly.<br>Follow us on Instagram for daily updates.
+          </div>
         </div>
 
         <div class="specials__grid">
 
-          <!-- FEATURED ITEM -->
+          <!-- FEATURED SEASONAL -->
           <article class="special-featured reveal">
-            <a href="index.html" class="special-featured__inner" aria-label="Grande Breakfast Burrito — Chef's Pick">
+            <div class="special-featured__inner">
               <div class="special-featured__image">
                 <img
-                  src="https://static.wixstatic.com/media/660fac_73476efa440f46798efe593f130aed0b~mv2.jpg"
-                  alt="Grande Breakfast Burrito — house made and served fresh"
+                  src="https://static.wixstatic.com/media/660fac_0881c520fa724573be2c902ca56b5d20~mv2.jpg"
+                  alt="Seasonal soup of the day — made fresh from scratch every morning"
                   loading="lazy">
               </div>
               <div class="special-featured__content">
-                <span class="special-badge special-badge--gold">Chef's Pick</span>
-                <h3 class="special-featured__name">Grande Breakfast Burrito</h3>
-                <p class="special-featured__desc">Our biggest, most-loved morning bite — loaded with egg, cheese, and your choice of meat, wrapped in a fresh flour tortilla. Comes with a side.</p>
+                <span class="special-badge special-badge--green">Seasonal</span>
+                <h3 class="special-featured__name">Soup of the Season</h3>
+                <p class="special-featured__desc">Made from scratch every single morning using fresh, seasonal ingredients. The recipe changes with what's best right now — hearty, warming, and always homemade. Ask us what's in the pot today.</p>
                 <div class="special-featured__footer">
-                  <span class="special-featured__price">$10.49</span>
+                  <div>
+                    <span class="special-featured__price">$4.49 <span style="font-size:.85rem;font-weight:400;color:var(--text-muted)">cup</span></span>
+                    <span class="special-featured__price" style="margin-left:var(--space-4)">$6.49 <span style="font-size:.85rem;font-weight:400;color:var(--text-muted)">bowl</span></span>
+                  </div>
                   <span class="special-featured__link">
-                    Order Now
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    Changes daily
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
                   </span>
                 </div>
               </div>
-            </a>
+            </div>
           </article>
 
           <!-- SIDE CARDS -->
           <div class="specials__side">
 
             <article class="special-card reveal reveal--delay-1">
-              <a href="index.html" class="special-card__inner" aria-label="Turkey Pesto Panini — Today's Special">
+              <div class="special-card__inner">
                 <div class="special-card__image">
                   <img
-                    src="https://static.wixstatic.com/media/660fac_2ed48242ffd248c3acfd577f1ae736c8~mv2.jpg"
-                    alt="Turkey Pesto Panini pressed golden"
+                    src="https://static.wixstatic.com/media/660fac_5e634016f09f4543b180eb06b8483758~mv2.jpg"
+                    alt="Spicy French Dip — weekly sandwich special"
                     loading="lazy">
                 </div>
                 <div class="special-card__content">
-                  <span class="special-badge special-badge--green">Today's Special</span>
-                  <h3 class="special-card__name">Turkey Pesto Panini</h3>
-                  <p class="special-card__desc">Pressed to perfection with turkey and house basil pesto.</p>
-                  <span class="special-card__price">$13.25</span>
+                  <span class="special-badge special-badge--red">Weekly Special</span>
+                  <h3 class="special-card__name">Spicy French Dip</h3>
+                  <p class="special-card__desc">This week's featured sandwich — tender beef with a kick, served with au jus for dipping.</p>
+                  <span class="special-card__price">$14.25</span>
                 </div>
-              </a>
+              </div>
             </article>
 
             <article class="special-card reveal reveal--delay-2">
-              <a href="index.html" class="special-card__inner" aria-label="Stuffed Scone — House Baked">
+              <div class="special-card__inner">
                 <div class="special-card__image">
                   <img
-                    src="https://static.wixstatic.com/media/660fac_d59efe917d1f424da0d8ad7e32be59d7~mv2.jpg"
-                    alt="Stuffed scone with strawberry jam — baked fresh today"
+                    src="https://static.wixstatic.com/media/660fac_b1cf6e6b7f0645f6a14385d801369426~mv2.jpg"
+                    alt="Freshly baked cookie — today's baker's special"
                     loading="lazy">
                 </div>
                 <div class="special-card__content">
-                  <span class="special-badge special-badge--cream">House Baked</span>
-                  <h3 class="special-card__name">Stuffed Scone</h3>
-                  <p class="special-card__desc">Baked fresh every morning — strawberry jam or Nutella.</p>
-                  <span class="special-card__price">$3.25</span>
+                  <span class="special-badge special-badge--gold">Baker's Special</span>
+                  <h3 class="special-card__name">Cookie of the Day</h3>
+                  <p class="special-card__desc">Our baker decides the flavor each morning. Fresh out of the oven — limited quantity.</p>
+                  <span class="special-card__price">$2.00</span>
                 </div>
-              </a>
+              </div>
             </article>
 
           </div>
 
         </div>
+
+        <p class="specials__footer-note reveal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+          Want to know today's specials? Call us at <a href="tel:+12533024749">(253) 302-4749</a> or check our <a href="https://www.instagram.com/sofiscornercafe/" target="_blank" rel="noopener noreferrer">Instagram</a>.
+        </p>
+
       </div>
     </section>
 
