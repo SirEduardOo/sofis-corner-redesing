@@ -155,79 +155,199 @@
       </div>
     </section>
 
-    <!-- ============ QUOTE FORM ============ -->
+    <!-- ============ QUOTE WIZARD ============ -->
     <section class="section" id="quote" aria-labelledby="quote-heading">
       <div class="container">
         <div class="menu-preview__header reveal">
           <span class="eyebrow">Get Started</span>
           <h2 id="quote-heading">Request a Quote</h2>
-          <p style="color:var(--text-muted);max-width:500px;margin:0 auto">Fill out the form below and we'll get back to you within one business day to discuss details and pricing.</p>
+          <p style="color:var(--text-muted);max-width:500px;margin:0 auto">Three quick steps — we'll get back to you within one business day.</p>
         </div>
 
         <div class="form-wrap reveal reveal--delay-1">
 
-          <form id="catering-form" novalidate aria-label="Catering quote request form">
-            <div class="form-grid">
+          <!-- Step progress indicator -->
+          <ol class="wizard__progress" aria-label="Form progress" role="list">
+            <li class="wizard__step-item is-active" data-wiz-step="1">
+              <div class="wizard__step-dot" aria-hidden="true">1</div>
+              <span class="wizard__step-label">Your Event</span>
+            </li>
+            <li class="wizard__step-item" data-wiz-step="2">
+              <div class="wizard__step-dot" aria-hidden="true">2</div>
+              <span class="wizard__step-label">Preferences</span>
+            </li>
+            <li class="wizard__step-item" data-wiz-step="3">
+              <div class="wizard__step-dot" aria-hidden="true">3</div>
+              <span class="wizard__step-label">Contact</span>
+            </li>
+          </ol>
 
-              <div class="form-group">
-                <label for="f-name">Full Name <span aria-hidden="true">*</span></label>
-                <input type="text" id="f-name" name="name" autocomplete="name" required placeholder="Jane Smith">
+          <div class="wizard">
+            <form id="catering-form" novalidate aria-label="Catering quote request">
+
+              <!-- STEP 1 -->
+              <div class="wizard__panel is-active" id="wiz-panel-1">
+                <h3 class="wizard__step-title">What kind of event?</h3>
+
+                <div class="wizard__event-cards">
+
+                  <label class="wizard__event-card">
+                    <input type="radio" name="event_type" value="corporate_breakfast" required>
+                    <div class="wizard__event-card-body">
+                      <span class="wizard__event-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                      </span>
+                      <span class="wizard__event-card-label">Corporate Breakfast</span>
+                    </div>
+                  </label>
+
+                  <label class="wizard__event-card">
+                    <input type="radio" name="event_type" value="office_meeting">
+                    <div class="wizard__event-card-body">
+                      <span class="wizard__event-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                      </span>
+                      <span class="wizard__event-card-label">Office Meeting</span>
+                    </div>
+                  </label>
+
+                  <label class="wizard__event-card">
+                    <input type="radio" name="event_type" value="private_event">
+                    <div class="wizard__event-card-body">
+                      <span class="wizard__event-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
+                      </span>
+                      <span class="wizard__event-card-label">Private Party</span>
+                    </div>
+                  </label>
+
+                  <label class="wizard__event-card">
+                    <input type="radio" name="event_type" value="birthday">
+                    <div class="wizard__event-card-body">
+                      <span class="wizard__event-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 00-2-2H6a2 2 0 00-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2 1 2 1"/><path d="M2 21h20"/><path d="M7 8v2M12 8v2M17 8v2"/></svg>
+                      </span>
+                      <span class="wizard__event-card-label">Birthday</span>
+                    </div>
+                  </label>
+
+                  <label class="wizard__event-card">
+                    <input type="radio" name="event_type" value="wedding">
+                    <div class="wizard__event-card-body">
+                      <span class="wizard__event-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      </span>
+                      <span class="wizard__event-card-label">Wedding</span>
+                    </div>
+                  </label>
+
+                  <label class="wizard__event-card">
+                    <input type="radio" name="event_type" value="other">
+                    <div class="wizard__event-card-body">
+                      <span class="wizard__event-card-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                      </span>
+                      <span class="wizard__event-card-label">Other</span>
+                    </div>
+                  </label>
+
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="w-date">Event Date <span aria-hidden="true">*</span></label>
+                    <input type="date" id="w-date" name="date" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="w-guests">Estimated Guests <span aria-hidden="true">*</span></label>
+                    <input type="number" id="w-guests" name="guests" min="1" required placeholder="e.g. 25">
+                  </div>
+                </div>
+
+                <div class="wizard__nav">
+                  <button type="button" class="wizard__nav-next" data-wiz-next="2">
+                    Continue
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="f-email">Email Address <span aria-hidden="true">*</span></label>
-                <input type="email" id="f-email" name="email" autocomplete="email" required placeholder="jane@example.com">
+              <!-- STEP 2 -->
+              <div class="wizard__panel" id="wiz-panel-2">
+                <h3 class="wizard__step-title">Event preferences</h3>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="w-time">Preferred Time</label>
+                    <select id="w-time" name="time">
+                      <option value="" disabled selected>Select a time</option>
+                      <option value="morning">Morning (7am – 11am)</option>
+                      <option value="midday">Midday (11am – 1pm)</option>
+                      <option value="afternoon">Afternoon (1pm – 4pm)</option>
+                      <option value="evening">Evening (after 4pm)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="w-location">Delivery Location</label>
+                    <input type="text" id="w-location" name="location" placeholder="Address or venue name">
+                  </div>
+                  <div class="form-group form-group--full">
+                    <label for="w-dietary">Dietary Notes</label>
+                    <input type="text" id="w-dietary" name="dietary" placeholder="Vegetarian, gluten-free, nut allergy…">
+                  </div>
+                  <div class="form-group form-group--full">
+                    <label for="w-menu">Menu Ideas or Special Requests</label>
+                    <textarea id="w-menu" name="menu" rows="4" placeholder="Preferred menu items, themes, or anything we should know…"></textarea>
+                  </div>
+                </div>
+
+                <div class="wizard__nav">
+                  <button type="button" class="wizard__nav-back" data-wiz-back="1">Back</button>
+                  <button type="button" class="wizard__nav-next" data-wiz-next="3">
+                    Continue
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="f-phone">Phone Number</label>
-                <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="(253) 555-0100">
+              <!-- STEP 3 -->
+              <div class="wizard__panel" id="wiz-panel-3">
+                <h3 class="wizard__step-title">Your contact info</h3>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="w-name">Full Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="w-name" name="name" autocomplete="name" required placeholder="Jane Smith">
+                  </div>
+                  <div class="form-group">
+                    <label for="w-email">Email Address <span aria-hidden="true">*</span></label>
+                    <input type="email" id="w-email" name="email" autocomplete="email" required placeholder="jane@example.com">
+                  </div>
+                  <div class="form-group form-group--full">
+                    <label for="w-phone">Phone Number</label>
+                    <input type="tel" id="w-phone" name="phone" autocomplete="tel" placeholder="(253) 555-0100">
+                  </div>
+                </div>
+
+                <div class="wizard__nav">
+                  <button type="button" class="wizard__nav-back" data-wiz-back="2">Back</button>
+                  <button type="submit" class="wizard__nav-next">
+                    Send Request
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="f-type">Event Type <span aria-hidden="true">*</span></label>
-                <select id="f-type" name="event_type" required>
-                  <option value="" disabled selected>Select an event type</option>
-                  <option value="corporate_breakfast">Corporate Breakfast</option>
-                  <option value="office_meeting">Office Meeting / Lunch</option>
-                  <option value="private_event">Private Event / Party</option>
-                  <option value="birthday">Birthday Celebration</option>
-                  <option value="wedding">Wedding / Reception</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+            </form>
 
-              <div class="form-group">
-                <label for="f-guests">Estimated Guests <span aria-hidden="true">*</span></label>
-                <input type="number" id="f-guests" name="guests" min="1" required placeholder="e.g. 25">
+            <div class="form-success" id="form-success" hidden>
+              <div class="form-success__icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
-
-              <div class="form-group">
-                <label for="f-date">Event Date <span aria-hidden="true">*</span></label>
-                <input type="date" id="f-date" name="date" required>
-              </div>
-
-              <div class="form-group form-group--full">
-                <label for="f-message">Additional Details</label>
-                <textarea id="f-message" name="message" rows="4" placeholder="Tell us about your event, dietary needs, preferred menu items, or any special requests…"></textarea>
-              </div>
-
-              <div class="form-group form-group--full">
-                <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">Send Request</button>
-              </div>
-
+              <h3 class="form-success__title">Request Sent!</h3>
+              <p>Thank you for reaching out. We'll be in touch within one business day to discuss your event.</p>
+              <p style="margin-top:var(--space-2);color:var(--text-muted);font-size:0.9rem">Questions? Call us at <a href="tel:+12533024749" style="color:var(--primary)">(253) 302-4749</a></p>
             </div>
-          </form>
-
-          <div class="form-success" id="form-success" hidden>
-            <div class="form-success__icon" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-            </div>
-            <h3 class="form-success__title">Request Sent!</h3>
-            <p>Thank you for reaching out. We'll be in touch within one business day to discuss your event.</p>
-            <p style="margin-top:var(--space-2);color:var(--text-muted);font-size:0.9rem">Questions? Call us at <a href="tel:+12533024749" style="color:var(--primary)">(253) 302-4749</a></p>
           </div>
 
         </div>
@@ -335,19 +455,62 @@
     updateStatus();
     setInterval(updateStatus, 60000);
 
-    // === CATERING FORM ===
-    const form    = document.getElementById('catering-form');
-    const success = document.getElementById('form-success');
+    // === QUOTE WIZARD ===
+    const wizForm    = document.getElementById('catering-form');
+    const wizSuccess = document.getElementById('form-success');
+    const stepItems  = document.querySelectorAll('.wizard__step-item');
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
+    function goToStep(next, direction) {
+      const current = document.querySelector('.wizard__panel.is-active');
+      if (!current) return;
+      const currentNum = parseInt(current.id.replace('wiz-panel-', ''));
+
+      // Validate required fields in current panel before moving forward
+      if (direction === 'next') {
+        const required = current.querySelectorAll('[required]');
+        let valid = true;
+        required.forEach(el => { if (!el.checkValidity()) { el.reportValidity(); valid = false; } });
+        if (!valid) return;
+        // Special: require event_type selection on step 1
+        if (currentNum === 1 && !wizForm.querySelector('[name="event_type"]:checked')) {
+          wizForm.querySelector('[name="event_type"]').focus();
+          return;
+        }
       }
-      form.hidden  = true;
-      success.hidden = false;
-      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      const nextPanel = document.getElementById('wiz-panel-' + next);
+      if (!nextPanel) return;
+
+      current.classList.remove('is-active');
+      nextPanel.classList.remove('slide-back');
+      if (direction === 'back') nextPanel.classList.add('slide-back');
+      nextPanel.classList.add('is-active');
+
+      // Update step indicators
+      stepItems.forEach(item => {
+        const n = parseInt(item.dataset.wizStep);
+        item.classList.toggle('is-active', n === next);
+        item.classList.toggle('is-done',   n < next);
+      });
+    }
+
+    // Wire up next / back buttons
+    document.querySelectorAll('[data-wiz-next]').forEach(btn => {
+      btn.addEventListener('click', () => goToStep(parseInt(btn.dataset.wizNext), 'next'));
+    });
+    document.querySelectorAll('[data-wiz-back]').forEach(btn => {
+      btn.addEventListener('click', () => goToStep(parseInt(btn.dataset.wizBack), 'back'));
+    });
+
+    wizForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const required = document.querySelector('#wiz-panel-3').querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(el => { if (!el.checkValidity()) { el.reportValidity(); valid = false; } });
+      if (!valid) return;
+      wizForm.closest('.wizard').querySelector('form').hidden = true;
+      wizSuccess.hidden = false;
+      wizSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
     // === SCROLL REVEAL ===

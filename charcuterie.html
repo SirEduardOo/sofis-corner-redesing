@@ -56,8 +56,8 @@
         <span class="split-hero__eyebrow">Handcrafted</span>
         <h1 class="split-hero__title" id="charc-page-title">Charcuterie<br>Boards</h1>
         <p class="split-hero__desc">Artisan boards assembled with premium meats, cheeses, seasonal fruits, and house-made accompaniments — perfect for any occasion.</p>
-        <a href="#boards" class="split-hero__cta">
-          See Our Boards
+        <a href="#order" class="split-hero__cta">
+          Request a Board
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -191,20 +191,167 @@
       </div>
     </section>
 
-    <!-- ============ CTA ============ -->
-    <section class="section" aria-labelledby="charc-cta-heading">
-      <div class="container" style="text-align:center">
-        <span class="eyebrow reveal">Ready to Order?</span>
-        <h2 class="reveal reveal--delay-1" id="charc-cta-heading">Give Us a Call</h2>
-        <p class="reveal reveal--delay-2" style="color:var(--text-muted);max-width:480px;margin:0 auto var(--space-8)">
-          Boards are made fresh to order. Call ahead so we can prepare something perfect for your occasion.
-        </p>
-        <a href="tel:+12533024749" class="btn btn--primary reveal reveal--delay-3" style="font-size:1.1rem;padding:var(--space-4) var(--space-10)">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="margin-right:8px;vertical-align:middle" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/>
-          </svg>
-          (253) 302-4749
-        </a>
+    <!-- ============ BOARD QUOTE FORM ============ -->
+    <section class="section" id="order" aria-labelledby="order-heading">
+      <div class="container">
+        <div class="menu-preview__header reveal">
+          <span class="eyebrow">Reserve Yours</span>
+          <h2 id="order-heading">Request a Board</h2>
+          <p style="color:var(--text-muted);max-width:480px;margin:0 auto">Choose your size and share the details — we'll confirm everything within one business day.</p>
+        </div>
+
+        <div class="charc-quote-wrap reveal reveal--delay-1">
+
+          <!-- LEFT: Summary sidebar -->
+          <aside class="charc-quote__sidebar" aria-label="Order summary">
+            <span class="charc-quote__sidebar-eyebrow">Your Selection</span>
+            <h3 class="charc-quote__sidebar-title">Board Summary</h3>
+            <p class="charc-quote__sidebar-desc">Handcrafted with premium meats, artisan cheeses, seasonal fruits &amp; house-made accompaniments.</p>
+
+            <hr class="charc-sidebar-divider">
+
+            <div>
+              <div class="charc-summary-row">
+                <span>Board size</span>
+                <span id="sum-size">—</span>
+              </div>
+              <div class="charc-summary-row">
+                <span>Serves</span>
+                <span id="sum-serves">—</span>
+              </div>
+              <div class="charc-summary-row">
+                <span>Quantity</span>
+                <span id="sum-qty">1</span>
+              </div>
+            </div>
+
+            <div class="charc-summary-total">
+              <span>Estimated Total</span>
+              <span id="sum-total">—</span>
+            </div>
+
+            <div class="charc-sidebar-hint">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>Boards are made fresh to order. We'll confirm your request and any special details by phone or email.</span>
+            </div>
+          </aside>
+
+          <!-- RIGHT: Form -->
+          <div class="charc-quote__form-panel">
+
+            <form id="charc-form" novalidate aria-label="Charcuterie board order request">
+
+              <!-- 1. Board Size -->
+              <div class="charc-form-section">
+                <span class="charc-form-section-label">1. Choose your board size</span>
+                <div class="board-picker">
+
+                  <label class="board-option">
+                    <input type="radio" name="board_size" value="small" data-price="45" data-serves="2–3" required>
+                    <div class="board-option__body">
+                      <span class="board-option__size">Small</span>
+                      <span class="board-option__price">$45</span>
+                      <span class="board-option__serves">Serves 2–3</span>
+                    </div>
+                  </label>
+
+                  <label class="board-option">
+                    <input type="radio" name="board_size" value="medium" data-price="75" data-serves="4–6">
+                    <div class="board-option__body">
+                      <span class="board-option__size">Medium</span>
+                      <span class="board-option__price">$75</span>
+                      <span class="board-option__serves">Serves 4–6</span>
+                    </div>
+                  </label>
+
+                  <label class="board-option">
+                    <input type="radio" name="board_size" value="large" data-price="110" data-serves="8–12">
+                    <div class="board-option__body">
+                      <span class="board-option__size">Large</span>
+                      <span class="board-option__price">$110</span>
+                      <span class="board-option__serves">Serves 8–12</span>
+                    </div>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- 2. Quantity -->
+              <div class="charc-form-section">
+                <span class="charc-form-section-label">2. How many boards?</span>
+                <div class="qty-control" role="group" aria-label="Board quantity">
+                  <button type="button" class="qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+                  <input type="number" class="qty-value" id="board-qty" name="quantity" value="1" min="1" max="20" aria-label="Quantity" readonly>
+                  <button type="button" class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+              </div>
+
+              <!-- 3. Date & Time -->
+              <div class="charc-form-section">
+                <span class="charc-form-section-label">3. When do you need it?</span>
+                <div class="charc-form-row charc-form-row-2">
+                  <div class="form-group">
+                    <label for="charc-date">Pickup Date <span aria-hidden="true">*</span></label>
+                    <input type="date" id="charc-date" name="date" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="charc-time">Preferred Time</label>
+                    <select id="charc-time" name="time">
+                      <option value="" disabled selected>Select time</option>
+                      <option value="morning">Morning (7am–11am)</option>
+                      <option value="midday">Midday (11am–1pm)</option>
+                      <option value="afternoon">Afternoon (1pm–4pm)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Contact -->
+              <div class="charc-form-section">
+                <span class="charc-form-section-label">4. Your contact info</span>
+                <div class="charc-form-row charc-form-row-2" style="margin-bottom:var(--space-4)">
+                  <div class="form-group">
+                    <label for="charc-name">Full Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="charc-name" name="name" autocomplete="name" required placeholder="Jane Smith">
+                  </div>
+                  <div class="form-group">
+                    <label for="charc-phone">Phone <span aria-hidden="true">*</span></label>
+                    <input type="tel" id="charc-phone" name="phone" autocomplete="tel" required placeholder="(253) 555-0100">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="charc-email">Email</label>
+                  <input type="email" id="charc-email" name="email" autocomplete="email" placeholder="jane@example.com">
+                </div>
+              </div>
+
+              <!-- 5. Notes -->
+              <div class="charc-form-section">
+                <div class="form-group">
+                  <label for="charc-notes">Occasion or Special Requests</label>
+                  <textarea id="charc-notes" name="notes" rows="3" placeholder="Birthday, anniversary, dietary restrictions, custom additions…"></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">
+                Submit Board Request
+              </button>
+
+            </form>
+
+            <div class="form-success" id="charc-success" hidden>
+              <div class="form-success__icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3 class="form-success__title">Request Received!</h3>
+              <p>We'll confirm your board order within one business day. Need it sooner? Give us a call.</p>
+              <p style="margin-top:var(--space-2);color:var(--text-muted);font-size:0.9rem">
+                <a href="tel:+12533024749" style="color:var(--primary)">(253) 302-4749</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -308,6 +455,60 @@
     }
     updateStatus();
     setInterval(updateStatus, 60000);
+
+    // === CHARCUTERIE BOARD FORM ===
+    const charcForm    = document.getElementById('charc-form');
+    const charcSuccess = document.getElementById('charc-success');
+
+    const sumSize   = document.getElementById('sum-size');
+    const sumServes = document.getElementById('sum-serves');
+    const sumQty    = document.getElementById('sum-qty');
+    const sumTotal  = document.getElementById('sum-total');
+    const qtyInput  = document.getElementById('board-qty');
+
+    let selectedPrice = 0;
+
+    function updateSummary() {
+      const checked = charcForm.querySelector('[name="board_size"]:checked');
+      const qty = parseInt(qtyInput.value) || 1;
+      if (checked) {
+        selectedPrice = parseInt(checked.dataset.price);
+        const label = checked.value.charAt(0).toUpperCase() + checked.value.slice(1);
+        sumSize.textContent   = label;
+        sumServes.textContent = checked.dataset.serves;
+        sumTotal.textContent  = '$' + (selectedPrice * qty);
+      } else {
+        sumSize.textContent   = '—';
+        sumServes.textContent = '—';
+        sumTotal.textContent  = '—';
+      }
+      sumQty.textContent = qty;
+    }
+
+    charcForm.querySelectorAll('[name="board_size"]').forEach(radio => {
+      radio.addEventListener('change', updateSummary);
+    });
+
+    document.getElementById('qty-minus').addEventListener('click', () => {
+      const v = parseInt(qtyInput.value);
+      if (v > 1) { qtyInput.value = v - 1; updateSummary(); }
+    });
+    document.getElementById('qty-plus').addEventListener('click', () => {
+      const v = parseInt(qtyInput.value);
+      if (v < 20) { qtyInput.value = v + 1; updateSummary(); }
+    });
+
+    charcForm.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!charcForm.querySelector('[name="board_size"]:checked')) {
+        charcForm.querySelector('[name="board_size"]').focus();
+        return;
+      }
+      if (!charcForm.checkValidity()) { charcForm.reportValidity(); return; }
+      charcForm.hidden    = true;
+      charcSuccess.hidden = false;
+      charcSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
 
     // === SCROLL REVEAL ===
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
