@@ -74,9 +74,10 @@
       <aside class="dd-sidebar" aria-label="Menu categories">
         <nav>
           <ul class="dd-cat-list" role="list">
-            <li><a href="#dd-breakfast" class="dd-cat-link is-active">Breakfast</a></li>
-            <li><a href="#dd-lunch"     class="dd-cat-link">Lunch</a></li>
-            <li><a href="#dd-drinks"    class="dd-cat-link">Drinks</a></li>
+            <li><button class="dd-cat-link is-active" data-filter="all">All</button></li>
+            <li><button class="dd-cat-link" data-filter="breakfast">Breakfast</button></li>
+            <li><button class="dd-cat-link" data-filter="lunch">Lunch</button></li>
+            <li><button class="dd-cat-link" data-filter="drinks">Drinks</button></li>
           </ul>
         </nav>
       </aside>
@@ -85,10 +86,11 @@
       <main class="dd-content">
 
         <!-- MOBILE CATEGORY TABS -->
-        <div class="dd-tabs" role="group" aria-label="Jump to category">
-          <a href="#dd-breakfast" class="dd-tab is-active">Breakfast</a>
-          <a href="#dd-lunch"     class="dd-tab">Lunch</a>
-          <a href="#dd-drinks"    class="dd-tab">Drinks</a>
+        <div class="dd-tabs" role="group" aria-label="Filter by category">
+          <button class="dd-tab is-active" data-filter="all">All</button>
+          <button class="dd-tab" data-filter="breakfast">Breakfast</button>
+          <button class="dd-tab" data-filter="lunch">Lunch</button>
+          <button class="dd-tab" data-filter="drinks">Drinks</button>
         </div>
 
         <!-- BREAKFAST -->
@@ -259,23 +261,30 @@
     updateStatus();
     setInterval(updateStatus, 60000);
 
-    // === MENU SCROLL SPY ===
+    // === MENU FILTER ===
+    const filterBtns = document.querySelectorAll('[data-filter]');
     const ddSections = document.querySelectorAll('.dd-section');
-    const catLinks   = document.querySelectorAll('.dd-cat-link, .dd-tab');
 
-    function setActive(id) {
-      catLinks.forEach(l => {
-        l.classList.toggle('is-active', l.getAttribute('href') === '#' + id);
+    function applyFilter(filter) {
+      // update active state on all filter buttons
+      filterBtns.forEach(btn => {
+        btn.classList.toggle('is-active', btn.dataset.filter === filter);
+      });
+
+      // show/hide sections
+      ddSections.forEach(section => {
+        const sectionKey = section.id.replace('dd-', ''); // "breakfast", "lunch", "drinks"
+        const visible = filter === 'all' || filter === sectionKey;
+        section.style.display = visible ? '' : 'none';
       });
     }
 
-    const spy = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) setActive(entry.target.id);
-      });
-    }, { rootMargin: '-30% 0px -60% 0px' });
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+    });
 
-    ddSections.forEach(s => spy.observe(s));
+    // start with All selected
+    applyFilter('all');
   </script>
   <!-- FLOATING ORDER BUTTON -->
   <div class="order-fab-wrap">
