@@ -141,7 +141,7 @@ p  { line-height: 1.72; }
   cursor: pointer;
 }
 .nav__logo-img {
-  height: 46px;
+  height: 68px;
   width: auto;
   object-fit: contain;
   transition: filter var(--fast) var(--ease);
