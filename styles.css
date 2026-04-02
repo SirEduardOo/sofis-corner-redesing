@@ -144,8 +144,8 @@ p  { line-height: 1.72; }
   height: 46px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
   transition: filter var(--fast) var(--ease);
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,.18));
 }
 .nav__links {
   display: none;
@@ -189,7 +189,7 @@ p  { line-height: 1.72; }
   -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
 }
-.nav--scrolled .nav__logo-img { filter: none; }
+.nav--scrolled .nav__logo-img { filter: drop-shadow(0 1px 3px rgba(0,0,0,.08)); }
 .nav--scrolled .nav__link     { color: rgba(26,26,26,.65); }
 .nav--scrolled .nav__link:hover,
 .nav--scrolled .nav__link[aria-current="page"] {
